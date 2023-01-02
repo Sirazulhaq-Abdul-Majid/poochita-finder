@@ -12,6 +12,10 @@ export class UserEntity extends AppUserEntity {
   @Column('varchar')
   name: string;
 
+  @FilterableField()
+  @Column('varchar')
+  username:string; 
+
   @FilterableField(() => String, { nullable: true })
   @Column('varchar', { nullable: true })
   photo?: string | FileUpload;
